@@ -105,8 +105,9 @@ const PopoverInternal = forwardRef(
             childRect != null &&
             popoverRect != null &&
             (!rectsAreEqual(childRect, popoverState.childRect) ||
-              // Fractional zoom can change measured sizes after translation.
-              // Ignore changes of at most 0.01px to stop repeated position updates.
+              // At some zoom levels, moving a tooltip can change its reported height
+              // from 47.687496px to 47.687504px without changing its actual size.
+              // Ignore differences of at most 0.01px so the tooltip does not keep moving.
               Math.abs(popoverRect.width - popoverState.popoverRect.width) >
                 POPOVER_SIZE_TOLERANCE ||
               Math.abs(popoverRect.height - popoverState.popoverRect.height) >
