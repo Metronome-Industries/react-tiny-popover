@@ -1,5 +1,5 @@
 {
-  "name": "react-tiny-popover",
+  "name": "@metronome-industries/react-tiny-popover",
   "version": "8.1.6",
   "description": "A simple and highly customizable popover react higher order component with no other dependencies!",
   "keywords": [
@@ -13,7 +13,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexkatz/react-tiny-popover.git"
+    "url": "https://github.com/Metronome-Industries/react-tiny-popover.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "files": [
     "dist"
